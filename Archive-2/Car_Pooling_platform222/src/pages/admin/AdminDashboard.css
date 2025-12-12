@@ -1,0 +1,74 @@
+/* src/pages/admin/Dashboard.css */
+/* ==============================
+   ADMIN DASHBOARD (MOBILE FIRST)
+   ============================== */
+
+.dashboard-wrapper {
+  padding: 16px;
+}
+
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Dashboard card */
+.dashboard-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.dashboard-card h3 {
+  margin-bottom: 6px;
+  font-size: 18px;
+  color: #1976d2;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .dashboard-card h3 {
+    font-size: 20px;
+  }
+}
+/* Fix spacing between tab buttons */
+.admin-tabs button {
+    margin-right: 12px;   /* spacing */
+}
+
+.admin-tabs button:last-child {
+    margin-right: 0;
+}
+
+/* LIGHT THEME */
+.theme-light {
+  background-color: #f4f7fc;
+  color: #111827;
+}
+
+.theme-light .stat-card {
+  background: white !important;
+  color: #111827;
+}
+
+/* DARK THEME */
+.theme-dark {
+  background-color: #0b1220;
+  color: white;
+}
+
+.theme-dark .stat-card {
+  background: #111827 !important;
+  color: white;
+}
+
+/* Sidebar + Header handled in AdminLayout */

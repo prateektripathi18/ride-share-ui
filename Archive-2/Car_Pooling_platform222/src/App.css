@@ -1,0 +1,240 @@
+/* src/App.css */
+/* ============================
+   GLOBAL PAGE WRAPPER
+   ============================ */
+   :root {
+  --background: #f4f7fc;
+  --panel: #ffffff;
+  --text: #111827; /* gray-900 */
+  --muted: #6b7280; /* gray-400 */
+}
+
+/* Light mode */
+body {
+  background-color: #f4f6fa;
+  color: #111;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: #0d0f14 !important;
+  color: #f5f5f5 !important;
+}
+
+/* dark mode overrides */
+.dark {
+  --background: #0b1220;
+  --panel: #111827;
+  --text: #f3f4f6; /* gray-100 */
+  --muted: #9ca3af;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+/* Generic card */
+.card, .navbar, .modal-content {
+  background: var(--panel);
+  color: var(--text);
+}
+
+/* small helper for muted text */
+.text-muted { color: var(--muted); }
+
+/* Toggle Switch styles (paste these as well) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d1d5db;
+  border-radius: 999px;
+  transition: .25s;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .25s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+}
+
+.switch input:checked + .slider {
+  background-color: #2563eb; /* blue when checked */
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+   :root {
+  --background: #f4f7fc;
+  --cards: #ffffff;
+  --text: #1a1a1a;
+}
+
+/* Dark mode */
+.dark {
+  --background: #121212;
+  --cards: #1e1e1e;
+  --text: #ffffff;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+.card {
+  background: var(--cards);
+  color: var(--text);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding:0;
+  text-align: center;
+}
+
+/* Remove leftover Vite styling */
+.card,
+.logo,
+.read-the-docs {
+  all: unset;
+}
+
+/* ============================= */
+/*  FINAL HOME PAGE STYLING     */
+/* ============================= */
+
+.home-container {
+  padding-top: 90px;        /* smaller top spacing */
+  padding-bottom: 0px;      /* remove bottom space */
+  height: 100vh;
+  width:100vw;  /* fit screen height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-title {
+  font-size: 30px;          /* SMALLER heading */
+  font-weight: 700;         /* bold but clean */
+  margin-bottom: 6px;
+}
+
+.home-subtitle {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;      /* reduced spacing */
+}
+
+/* BUTTON GROUP */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;                /* smaller gap */
+}
+
+/* Login + Register */
+.top-buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Browse rides */
+.bottom-buttons {
+  justify-content: center;
+  display: flex;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .top-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .secondary-btn {
+    min-width: 160px;
+  }
+}
+
+/* ============================
+   BUTTON STYLING
+   ============================ */
+
+/* BUTTON STYLE */
+.home-btn {
+  background-color: #1a73e8;
+  color: white;
+  padding: 10px 0;          /* smaller buttons */
+  border-radius: 10px;
+  min-width: 160px;         /* reduced width */
+  text-align: center;
+  font-size: 15px;          /* slightly smaller text */
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.home-btn:hover {
+  background-color: #1663c0;
+}
+
+/* Browse Rides button slightly wider */
+.secondary-btn {
+  width: 260px;
+}
+
+/* ============================
+   RESPONSIVE FOR MOBILE
+   ============================ */
+
+@media (max-width: 650px) {
+  .top-buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .secondary-btn {
+    width: 220px;
+  }
+
+  .home-title {
+    font-size: 32px;
+  }
+}

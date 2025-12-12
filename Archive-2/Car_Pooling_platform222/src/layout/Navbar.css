@@ -1,0 +1,119 @@
+/* src/layout/Navbar.css */
+/* Navbar styling */
+.navbar {
+    background: linear-gradient(90deg, #1e3a8a 0%, #2563eb 100%);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(30, 58, 138, 0.2);
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+}
+
+.logo-icon {
+    background: rgba(255,255,255,0.2);
+    padding: 8px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-item {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.nav-item:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.admin-badge {
+    background: #f59e0b;
+    color: white !important;
+    font-weight: 700;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(0,0,0,0.2);
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.user-name {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.logout-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.8);
+    cursor: pointer;
+    display: flex;
+    padding: 4px;
+}
+
+.logout-btn:hover {
+    color: #ef4444;;
+}
+
+.nav-btn-login {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 15px;
+    
+}
+
+.nav-btn-register {
+    background: white;
+    color: var(--primary);
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}

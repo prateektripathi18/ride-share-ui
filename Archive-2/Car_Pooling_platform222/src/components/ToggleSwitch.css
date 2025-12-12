@@ -1,0 +1,46 @@
+/* Container for the switch and label */
+.toggle-switch-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between label and switch */
+  cursor: pointer;
+}
+
+/* Label style */
+.toggle-label {
+  font-size: 14px;
+  color: #333; /* Dark gray text */
+}
+
+/* The main switch track */
+.toggle-switch {
+  width: 50px; /* Width of the entire switch */
+  height: 25px; /* Height of the entire switch */
+  border-radius: 25px;
+  background-color: #ccc; /* Default (OFF) background color */
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+/* Style when the switch is ON */
+.toggle-switch.on {
+  background-color: #4CAF50; /* Green background color */
+}
+
+/* The movable handle/thumb */
+.switch-handle {
+  width: 21px; /* Slightly smaller than height for padding */
+  height: 21px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px; /* Center handle vertically */
+  left: 2px; /* Default (OFF) position */
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Position the handle when the switch is ON */
+.toggle-switch.on .switch-handle {
+  transform: translateX(25px); /* Move handle to the right (50px - 21px - 2px - 2px = 25px) */
+}

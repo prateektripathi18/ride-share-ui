@@ -1,0 +1,149 @@
+/* src/pages/auth/Auth.css */
+/* =========================================================
+   MOBILE-FIRST AUTH UI
+   Designed for small screens first, then scales upward
+   ========================================================= */
+
+/* ---- Page Container ---- */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background: #f2f6fc;
+}
+
+/* ---- Card ---- */
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  animation: slideUp 0.35s ease-out;
+}
+
+/* ---- Title ---- */
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #1976d2;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ---- Form layout ---- */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Label ---- */
+.auth-form label {
+  margin: 10px 0 4px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* ---- Input fields ---- */
+.auth-form input,
+.auth-select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd3df;
+  background: #fafafa;
+  font-size: 15px;
+  transition: 0.25s;
+  width: 100%;
+}
+
+.auth-form input:focus,
+.auth-select:focus {
+  border-color: #1976d2;
+  outline: none;
+  background: #ffffff;
+}
+
+/* ---- Button ---- */
+.btn {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background: #1976d2;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  background: #145cad;
+}
+
+/* ---- Footer Links ---- */
+.auth-footer {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-footer a {
+  color: #1976d2;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Mobile Animation ---- */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   TABLETS & SMALL LAPTOPS
+   ========================================================= */
+@media (min-width: 480px) {
+  .auth-card {
+    padding: 28px;
+    max-width: 420px;
+  }
+
+  .auth-card h2 {
+    font-size: 26px;
+  }
+}
+
+/* =========================================================
+   DESKTOP SCREENS
+   ========================================================= */
+@media (min-width: 768px) {
+  .auth-container {
+    padding: 40px;
+  }
+
+  .auth-card {
+    padding: 32px;
+    max-width: 440px;
+  }
+
+  .auth-card h2 {
+    font-size: 28px;
+  }
+}

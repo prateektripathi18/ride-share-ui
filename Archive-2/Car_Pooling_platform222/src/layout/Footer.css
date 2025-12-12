@@ -1,0 +1,141 @@
+/* src/layout/Footer.css */
+
+/* --- Layout Utilities (Fixes Sticky Footer) --- */
+/* These classes match the structure in App.jsx to ensure the footer stays at the bottom */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+/* --- Footer Styles --- */
+.footer {
+    background-color: rgba(15, 23, 42, 0.95); /* Deep dark background */
+    border-top: 1px solid var(--glass-border);
+    color: var(--text-muted);
+    padding: 24px 0 16px; /* Reduced padding from 48px to 24px */
+    margin-top: auto; /* Pushes footer to bottom if content is short */
+    backdrop-filter: blur(12px);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Slightly smaller min-width */
+    gap: 24px; /* Reduced gap from 40px */
+    margin-bottom: 24px; /* Reduced margin from 40px */
+}
+
+/* --- Branding Section --- */
+.footer-brand h2 {
+    color: var(--text-main);
+    font-size: 20px; /* Slightly smaller font */
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
+}
+
+.footer-brand p {
+    line-height: 1.5;
+    font-size: 13px;
+    max-width: 300px;
+    margin: 0;
+}
+
+/* --- Links Section --- */
+.footer-section h3 {
+    color: var(--text-main);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+/* --- Socials & Contact --- */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.social-icon {
+    color: var(--text-muted);
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-icon:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.contact-info p {
+    margin: 4px 0;
+}
+
+/* --- Bottom Bar --- */
+.footer-bottom {
+    border-top: 1px solid var(--glass-border);
+    padding-top: 16px; /* Reduced padding */
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+    }
+    
+    .footer-brand p, .contact-info {
+        margin: 0 auto;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}

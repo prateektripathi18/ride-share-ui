@@ -1,0 +1,111 @@
+/* src/pages/Rides.css */
+/* Full Center Layout - No Scroll */
+.rides-container {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fc;
+  height: 100vh;         /* Prevents scroll */
+  overflow: hidden;      /* Removes extra scroll */
+}
+
+.rides-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;           /* BLACK TEXT */
+  margin-bottom: 25px;
+}
+
+/* Button layout changed to TWO ROWS */
+/* Buttons Layout */
+.tab-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;                 /* SPACE between rows */
+}
+
+/* Row containers */
+.btn-row-1,
+.btn-row-2 {
+  display: flex;
+  gap: 20px;                 /* SPACE between buttons */
+}
+
+/* Button style */
+.tab-btn {
+  padding: 12px 0;
+  width: 170px;              /* SAME SIZE BUTTONS */
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  background: #2f5ee6;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.25s ease;
+  text-decoration: none;
+}
+
+.tab-btn:hover {
+  transform: translateY(-3px);
+  background: #2447b8;
+}
+
+.active {
+  background: #1a3ea3 !important;
+}
+
+
+.tab-btn:hover {
+  transform: translateY(-3px);
+  background: #2447b8;
+}
+
+/* Active Button */
+.active {
+  background: #1a3ea3 !important;
+}
+
+/* Ride Cards (Same) */
+.ride-grid {
+  display: grid;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.ride-card {
+  width: 350px;
+  background: white;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.ride-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.manage-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #2f5ee6;
+  font-weight: 600;
+}
+
+.rides-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 35px;   /* increased spacing */
+}
